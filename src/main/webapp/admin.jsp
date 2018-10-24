@@ -71,8 +71,7 @@
 </head>
 <body class="easyui-layout">
     <%--上条--%>
-    <div region="north" style="height: 50px; background-color: #222222">
-
+    <div region="north" style="height: 80px; background-color: #222222">
     </div>
     <%--中条--%>
     <div region="center">
