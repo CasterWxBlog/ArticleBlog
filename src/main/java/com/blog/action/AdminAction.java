@@ -19,7 +19,6 @@ public class AdminAction extends HttpServlet {
             req.getRequestDispatcher("login.jsp").forward(req, resp);
             return;
         }else if (userName.equals("wxh")&&password.equals("123")){
-            System.out.println("ok");
             resp.sendRedirect("admin.jsp");
         }else {
             System.out.println("error");
