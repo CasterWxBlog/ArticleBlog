@@ -11,10 +11,10 @@ public class UserTest {
     @Test
     public void testSave() {
         User user = new User() ;
-        user.setId(1610120020);
-        user.setName("wangxiaohu");
-        user.setPassword("mashaladi");
-        user.setRoot(false);
+        user.setId(1610120023);
+        user.setName("jgy");
+        user.setPassword("jgy");
+        user.setRoot(true);
         userDAO.save(user);
     }
     @Test
@@ -23,5 +23,9 @@ public class UserTest {
         for(int i=0;i<list.size();i++){
             System.out.print(list.get(i));
         }
+    }
+    @Test
+    public void testDelete(){
+        userDAO.delete(1610120020);
     }
 }
