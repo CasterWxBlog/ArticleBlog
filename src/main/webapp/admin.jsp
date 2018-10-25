@@ -9,37 +9,29 @@
     <script type="text/javascript">
         $(function () {
             var treeData = [{
-                text:"首页",
+                text:"日志",
                 attributes:{
-                    url:""
+                    url:"/log"
                 }
             },{
-                text:"抓到我",
-                children:[{
-                    text:"Github",
-                    attributes:{
-                        url:"https://github.com/CasterWx"
-                    }
-                },{
-                    text:"cnblogs",
-                    attributes:{
-                        url:"https://home.cnblogs.com/u/LexMoon/"
-                    }
-                },{
-                    text:"知乎",
-                    attributes:{
-                        url:""
-                    }
-                }]
+                text:"文章列表",
+                attributes:{
+                    url:"/articlelist"
+                }
             },{
                 text:"后宫",
                 attributes:{
-                    url:""
+                    url:"/gays"
                 }
             },{
                 text:"留言板",
                 attributes:{
-                    url:""
+                    url:"/message"
+                }
+            },{
+                text:"用户",
+                attributes:{
+                    url:"/user"
                 }
             }
             ];

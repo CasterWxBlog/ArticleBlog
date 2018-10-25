@@ -28,6 +28,7 @@
                     <li><a href="#">后宫</a></li>
                     <li><a href="https://github.com/CasterWx">Github</a></li>
                     <li><a href="http://www.cnblogs.com/LexMoon/">cnblog</a></li>
+                    <li><a href="/ourmessage">留言板</a></li>
                 </ul>
             </div>
             <ul class="nav navbar-nav navbar-right">
