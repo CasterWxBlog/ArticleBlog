@@ -62,8 +62,20 @@
     </script>
 </head>
 <body class="easyui-layout">
+<%
+    String username = (String) session.getAttribute("name") ;
+    Integer id = (Integer) session.getAttribute("id") ;
+    if(username==null){
+        response.sendRedirect("index.jsp");
+        return;
+    }
+%>
     <%--上条--%>
-    <div region="north" style="height: 80px; background-color: #222222">
+    <div region="north" style="height: 80px; background-color: #66afe9">
+        <div style="float:right;">
+            当前用户：&nbsp;<font color="red" > <%=id%> &nbsp; <%=username%> </font>
+            <form action="/"><input type="submit" value="退出"></form>
+        </div>
     </div>
     <%--中条--%>
     <div region="center">
@@ -81,6 +93,5 @@
     </div>
     <%--南条--%>
     <div region="south" style="height: 30px;" align="center">版权所有<a href="https://github.com/CasterWx">Antzuhl@gmail.com</a></div>
-</body>
 </body>
 </html>

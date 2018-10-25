@@ -9,7 +9,7 @@ import java.io.IOException;
 public class OurMessageAction extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.sendRedirect("ourmessage.jsp");
+        req.getRequestDispatcher("ourmessage.jsp").forward(req, resp);
     }
 
     @Override

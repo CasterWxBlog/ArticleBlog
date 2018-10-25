@@ -43,7 +43,7 @@
                 <td><%=list.get(i).getName()%></td>
                 <td><%=list.get(i).getPassword()%></td>
                 <td><%=list.get(i).getRoot()%></td>
-                <td> <button type="button" onclick="delete_user();" class="btn btn-danger">删除</button></td>
+                <td><button type="button"  onclick="callMe(<%=list.get(i).getId()%>);" class="btn btn-danger">删除</button></td>
             </tr>
             </tbody>
         <%
@@ -53,15 +53,41 @@
     </div>
 </div>
 <script>
-    function delete_user() {
-            //利用对话框返回的值 （true 或者 false）
-            if (confirm("你确定提交吗？")) {
-                alert("点击了确定");
+    var VaChina=function(){
+        var _this=this;
+        _this.ajax=function(){
+            var xmlHttp=false;
+            try{xmlHttp = new XMLHttpRequest();}
+            catch(trymicrosoft){
+                try{xmlHttp=new ActiveXObject("Msxml2.XMLHTTP");
+                }catch(othermicrosoft){
+                    try{xmlHttp = new ActiveXObject("Microsoft.XMLHTTP")}
+                    catch(failed){}
+                }
             }
-            else {
-                alert("点击了取消");
-            }
-    }
+            return xmlHttp;
+        };
+        _this.ajaxGet=function(url,functionCallback,isSynchronous){
+            var xmlHttp = _this.ajax();
+            if(isSynchronous==undefined || isSynchronous==true) isSynchronous=true;
+            else isSynchronous=false;
+            xmlHttp.open("get",url,isSynchronous);
+            xmlHttp.onreadystatechange = function(){
+                if(xmlHttp.readyState == 4&&xmlHttp.status == 200){
+                    functionCallback(xmlHttp);
+                }
+            };
+            xmlHttp.send(null);
+        };
+    };
+    var callMe=function(data){//onclick触发此方法
+        var va = new VaChina();
+        va.ajaxGet("delete.jsp?menu="+data
+            ,function(xmlHttp){
+                alert("Nice 此人已被除名！");
+                window.location.reload();
+            });
+    };
 </script>
 </body>
 </html>

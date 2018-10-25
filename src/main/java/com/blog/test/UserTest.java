@@ -11,9 +11,25 @@ public class UserTest {
     @Test
     public void testSave() {
         User user = new User() ;
+
+        user.setId(1610120020);
+        user.setName("wxh");
+        user.setPassword("wxh");
+        user.setRoot(true);
+        userDAO.save(user);
+        user.setId(1610120021);
+        user.setName("hhw");
+        user.setPassword("hhw");
+        user.setRoot(true);
+        userDAO.save(user);
+        user.setId(1610120022);
+        user.setName("xq");
+        user.setPassword("xq");
+        user.setRoot(true);
+        userDAO.save(user);
         user.setId(1610120023);
-        user.setName("jgy");
-        user.setPassword("jgy");
+        user.setName("wwx");
+        user.setPassword("wwx");
         user.setRoot(true);
         userDAO.save(user);
     }

@@ -7,6 +7,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 public class AdminAction extends HttpServlet {
@@ -15,27 +16,23 @@ public class AdminAction extends HttpServlet {
         String userName=req.getParameter("name");
         String password=req.getParameter("password");
 
-        req.setAttribute("name", userName);
-        req.setAttribute("password", password);
-        if(userName==null||password==null){
-            System.out.println("null");
-            req.setAttribute("error", "用户名或密码为空！");
-            req.getRequestDispatcher("login.jsp").forward(req, resp);
-            return;
-        }
         UserDAO userDAO = new UserDAO();
         User user = userDAO.get(new Integer(userName)) ;
-        if (user.getPassword().equals(password)){
-            if (user.getRoot()){
-                resp.sendRedirect("admin.jsp");
-            }else if(user.getRoot()){
-                req.getRequestDispatcher("index.jsp").forward(req, resp);
+        if (user!=null){
+            // 获取Session
+            HttpSession session=req.getSession();
+            session.setAttribute("id", user.getId());
+            session.setAttribute("name", user.getName());
+            session.setAttribute("password", password);
+            if (user.getPassword().equals(password)){
+                if (user.getRoot()){
+                    req.getRequestDispatcher("admin.jsp").forward(req, resp);
+                }else if(!user.getRoot()){
+                    req.getRequestDispatcher("index.jsp").forward(req, resp);
+                }
             }
-        }else {
-            System.out.println("error");
-            req.setAttribute("error", "用户名或密码错误！");
-            // 服务器跳转
-            req.getRequestDispatcher("login.jsp").forward(req, resp);
+        } else {
+            resp.sendRedirect("login.jsp");
         }
 
     }

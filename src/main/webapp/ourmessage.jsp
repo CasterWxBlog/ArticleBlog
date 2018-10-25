@@ -16,6 +16,13 @@
     <script src="bootstrap3/js/bootstrap.min.js"></script>
     <script src="bootstrap3/js/npm.js"></script>
 </head>
+<%
+    String username = (String) session.getAttribute("name") ;
+    Integer id = (Integer) session.getAttribute("id") ;
+    if(username==null){
+        username = "未登录" ;
+    }
+%>
 <body style="background: url(image/bj.png) center 0 no-repeat; background-size: cover;background-attachment: fixed;">
 <nav class="navbar navbar-inverse"  role="navigation">
     <div class="container-fluid">
@@ -32,7 +39,7 @@
             </ul>
         </div>
         <ul class="nav navbar-nav navbar-right">
-            <li><a><span class="glyphicon glyphicon-user"></span>未登录</a></li>
+            <li><a><span class="glyphicon glyphicon-user"></span><%=username%></a></li>
             <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> 登录</a></li>
         </ul>
     </div>

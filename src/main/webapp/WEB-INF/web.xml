@@ -76,4 +76,14 @@
     <servlet-name>ourmessage</servlet-name>
     <url-pattern>/ourmessage</url-pattern>
   </servlet-mapping>
+  <!--signup-->
+  <servlet>
+    <servlet-name>signup</servlet-name>
+    <servlet-class>com.blog.action.SignupAction</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>signup</servlet-name>
+    <url-pattern>/signup</url-pattern>
+  </servlet-mapping>
+
 </web-app>
