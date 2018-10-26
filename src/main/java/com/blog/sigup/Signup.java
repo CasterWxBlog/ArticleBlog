@@ -1,7 +1,6 @@
 package com.blog.sigup;
 // 注册
 public class Signup{
-
 }
 //{
 //        text:"开发者",
