@@ -6,11 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ae3956a-232b-4c82-8e7b-9d6017daddf4" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/sigup/Signup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blog/sigup/Signup.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/blog/test/UserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/blog/test/UserTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="3ae3956a-232b-4c82-8e7b-9d6017daddf4" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -66,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="web.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="87" lean-forward="true" selection-start-line="87" selection-end-line="87" />
+            <state relative-caret-position="115">
+              <caret line="83" column="8" lean-forward="true" selection-start-line="83" selection-start-column="8" selection-end-line="83" selection-end-column="8" />
               <folding>
                 <element signature="n#servlet#0;n#web-app#0;n#!!top" />
                 <element signature="n#servlet-mapping#0;n#web-app#0;n#!!top" />
@@ -86,14 +82,11 @@
                 <element signature="n#servlet-mapping#6;n#web-app#0;n#!!top" />
                 <element signature="n#servlet#7;n#web-app#0;n#!!top" />
                 <element signature="n#servlet-mapping#7;n#web-app#0;n#!!top" />
+                <element signature="n#servlet#8;n#web-app#0;n#!!top" />
+                <element signature="n#servlet-mapping#8;n#web-app#0;n#!!top" />
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bj.png" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/image/bj.png">
-          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
     </leaf>
@@ -170,7 +163,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-9" />
     <option name="y" value="-9" />
     <option name="width" value="980" />
@@ -554,7 +547,7 @@
       <workItem from="1540442233697" duration="5015000" />
       <workItem from="1540448663500" duration="13140000" />
       <workItem from="1540472734227" duration="9509000" />
-      <workItem from="1540512137307" duration="999000" />
+      <workItem from="1540512137307" duration="1332000" />
     </task>
     <servers />
   </component>
@@ -591,10 +584,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48486000" />
+    <option name="totallyTimeSpent" value="48819000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -925,10 +919,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/image/bj.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="87" lean-forward="true" selection-start-line="87" selection-end-line="87" />
+        <state relative-caret-position="115">
+          <caret line="83" column="8" lean-forward="true" selection-start-line="83" selection-start-column="8" selection-end-line="83" selection-end-column="8" />
           <folding>
             <element signature="n#servlet#0;n#web-app#0;n#!!top" />
             <element signature="n#servlet-mapping#0;n#web-app#0;n#!!top" />
@@ -944,12 +941,11 @@
             <element signature="n#servlet-mapping#6;n#web-app#0;n#!!top" />
             <element signature="n#servlet#7;n#web-app#0;n#!!top" />
             <element signature="n#servlet-mapping#7;n#web-app#0;n#!!top" />
+            <element signature="n#servlet#8;n#web-app#0;n#!!top" />
+            <element signature="n#servlet-mapping#8;n#web-app#0;n#!!top" />
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/image/bj.png">
-      <provider selected="true" editor-type-id="images" />
     </entry>
   </component>
   <component name="masterDetails">
