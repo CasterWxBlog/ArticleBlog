@@ -15,6 +15,28 @@
     <script src="markdown/dist/showdown.js"></script>
     <script src="bootstrap3/js/bootstrap.min.js"></script>
     <script src="bootstrap3/js/npm.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docute@3.4.12/plugins/docsearch.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docute-evanyou/dist/evanyou.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docute@3.4.12/dist/docute.js"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-48084758-9');
+    </script>
+    <link class="dplayer-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.css">
+    <style>
+        body {
+            text-rendering: auto;
+        }
+        #evanyou-canvas {
+            z-index: -1 !important;
+        }
+        .dplayer-wrap {
+            max-width: 700px;
+            margin: 20px 0;
+        }
+    </style>
 </head>
 <%
     String username = (String) session.getAttribute("name") ;
@@ -23,7 +45,8 @@
         username = "未登录" ;
     }
 %>
-<body style="background: url(image/bj.png) center 0 no-repeat; background-size: cover;background-attachment: fixed;">
+<body>
+<script src="css/config.js"></script>
 <nav class="navbar navbar-inverse"  role="navigation">
     <div class="container-fluid">
         <div class="navbar-header">
