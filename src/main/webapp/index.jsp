@@ -18,14 +18,6 @@
     <script src="https://cdn.jsdelivr.net/npm/docute@3.4.12/plugins/docsearch.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docute-evanyou/dist/evanyou.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docute@3.4.12/dist/docute.js"></script>
-
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'UA-48084758-9');
-    </script>
-    <link class="dplayer-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.css">
     <style>
         body {
             text-rendering: auto;
@@ -94,17 +86,43 @@
         <li><a href="#">&raquo;</a></li>
     </ul>
 </div>
+<%--<iframe src="//player.bilibili.com/player.html?aid=34679476&cid=60755437&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>--%>
 </body>
 <script type="text/javascript">
+    var a_idx = 0;
+    jQuery(document).ready(function($) {
+        $("body").click(function(e) {
+            var a = new Array("共产主义", "肥宅", "永远喜欢Java","千万调音师","心态炸了啊","心里没点X数","回家收衣服啦");
+            var $i = $("<span/>").text(a[a_idx]);
+            a_idx = (a_idx + 1) % a.length;
+            var x = e.pageX,
+                y = e.pageY;
+            $i.css({
+                "z-index": 999999999999999999999999999999999999999999999999999999999999999999999,
+                "top": y - 20,
+                "left": x,
+                "position": "absolute",
+                "font-weight": "bold",
+                "color": "rgb(72,85,137)"
+            });
+            $("body").append($i);
+            $i.animate({
+                    "top": y - 180,
+                    "opacity": 0
+                },
+                1500,
+                function() {
+                    $i.remove();
+                });
+        });
+    });
+</script>
+<script type="text/javascript">
     $(function () {
-
         var converter = new showdown.Converter(),
             text = "### [直男眼里 的 没有对象也要谈恋爱之女朋友的情绪监控 之 分词](/blog1)\n" +
                 "\n" +
-                "> Blog : [Antzuhl](http://www.cnblogs.com/LexMoon/)\n" +
-                "\n" +
-                "> Github : [CasterWx](https://github.com/CasterWx)\n" +
-                "\n" +
+                "![](https://diygod.me/images/havefun.jpg)\n\n" +
                 "\n" +
                 ":kissing_closed_eyes::kissing_closed_eyes:  通过女朋友的一句话分析她的心情 。\n" +
                 "\n" +
