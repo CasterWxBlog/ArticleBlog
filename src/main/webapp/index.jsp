@@ -86,9 +86,24 @@
         <li><a href="#">&raquo;</a></li>
     </ul>
 </div>
+<link rel="stylesheet" href="aplayer/APlayer.min.css">
+<div id="aplayer" style="width: 500px;"></div>
+<script src="aplayer/APlayer.min.js"></script>
 <%--<iframe src="//player.bilibili.com/player.html?aid=34679476&cid=60755437&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>--%>
 </body>
+<script>
+    const ap = new APlayer({
+        container: document.getElementById('aplayer'),
+        audio: [{
+            name: '不醉不会',
+            artist: '田馥甄',
+            url: 'https://m7.music.126.net/20181120211255/f488534f2d07c72f18f4a656faca72b9/ymusic/d248/3dd5/338d/35389d52b261e7c20b5cddefc88c8861.mp3',
+            cover: 'https://p3.music.126.net/aPnwHIJECLpQCoSV-qm_qA==/109951163571315498.jpg?param=90y90'
+        }]
+    });
+</script>
 <script type="text/javascript">
+
     var a_idx = 0;
     jQuery(document).ready(function($) {
         $("body").click(function(e) {
@@ -98,7 +113,7 @@
             var x = e.pageX,
                 y = e.pageY;
             $i.css({
-                "z-index": 999999999999999999999999999999999999999999999999999999999999999999999,
+                "z-index": 99999999999999999999999999999999999999999,
                 "top": y - 20,
                 "left": x,
                 "position": "absolute",
