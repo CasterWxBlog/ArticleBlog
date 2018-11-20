@@ -18,6 +18,7 @@
     <script src="https://cdn.jsdelivr.net/npm/docute@3.4.12/plugins/docsearch.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docute-evanyou/dist/evanyou.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docute@3.4.12/dist/docute.js"></script>
+
     <style>
         body {
             text-rendering: auto;
@@ -62,6 +63,9 @@
 </nav>
 <div class="container">
     <div class="jumbotron" style="opacity:0.8;" >
+        <link rel="stylesheet" href="dplayer/DPlayer.min.css">
+        <div id="dplayer"></div>
+        <script src="dplayer/DPlayer.min.js"></script>
         <div id="result">
             <h2 align="center">留言板</h2><br><br>
             <h4>有什么话要对我说吗？这里是你畅所欲言的地方，可以咨询，可以交流，可以感叹，可以发飙，但不可以订外卖。</h4>
@@ -71,4 +75,23 @@
 </div>
 <%--<iframe src="//player.bilibili.com/player.html?aid=34679476&cid=60755437&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>--%>
 </body>
+
+<script type="text/javascript">
+    const dp = new DPlayer({
+        container: document.getElementById('dplayer'),
+        screenshot: true,
+        video: {
+            url: 'https://moeplayer.b0.upaiyun.com/dplayer/hikarunara.mp4',
+            pic: 'demo.jpg',
+            thumbnails: 'thumbnails.jpg'
+        },
+        subtitle: {
+            url: 'webvtt.vtt'
+        },
+        danmaku: {
+            id: 'demo',
+            api: 'https://api.prprpr.me/dplayer/v3/bilibili?aid=4157142'
+        }
+    });
+</script>
 </html>
