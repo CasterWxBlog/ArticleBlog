@@ -62,10 +62,10 @@
     </div>
 </nav>
 <div class="container">
+    <link rel="stylesheet" href="dplayer/DPlayer.min.css">
+    <div id="dplayer" style=" width:1100px; height:600px;"></div>
+    <script src="dplayer/DPlayer.min.js"></script>
     <div class="jumbotron" style="opacity:0.8;" >
-        <link rel="stylesheet" href="dplayer/DPlayer.min.css">
-        <div id="dplayer"></div>
-        <script src="dplayer/DPlayer.min.js"></script>
         <div id="result">
             <h2 align="center">留言板</h2><br><br>
             <h4>有什么话要对我说吗？这里是你畅所欲言的地方，可以咨询，可以交流，可以感叹，可以发飙，但不可以订外卖。</h4>
