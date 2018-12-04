@@ -87,90 +87,19 @@
     </ul>
 </div>
 <link rel="stylesheet" href="aplayer/APlayer.min.css">
-<div id="aplayer" style="width: 500px;"></div>
+<div id="aplayer" style="align:center;width:500px;position:fixed; bottom:0; z-index:999;  overflow:visible;">
+</div>
 <script src="aplayer/APlayer.min.js"></script>
 <%--<iframe src="//player.bilibili.com/player.html?aid=34679476&cid=60755437&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>--%>
 </body>
-<script>
-    const ap = new APlayer({
-        container: document.getElementById('aplayer'),
-        audio: [{
-            name: '不醉不会',
-            artist: '田馥甄',
-            url: 'https://m7.music.126.net/20181120211255/f488534f2d07c72f18f4a656faca72b9/ymusic/d248/3dd5/338d/35389d52b261e7c20b5cddefc88c8861.mp3',
-            cover: 'https://p3.music.126.net/aPnwHIJECLpQCoSV-qm_qA==/109951163571315498.jpg?param=90y90'
-        }]
-    });
-</script>
-<script type="text/javascript">
-
-    var a_idx = 0;
-    jQuery(document).ready(function($) {
-        $("body").click(function(e) {
-            var a = new Array("共产主义", "肥宅", "永远喜欢Java","千万调音师","心态炸了啊","心里没点X数","回家收衣服啦");
-            var $i = $("<span/>").text(a[a_idx]);
-            a_idx = (a_idx + 1) % a.length;
-            var x = e.pageX,
-                y = e.pageY;
-            $i.css({
-                "z-index": 99999999999999999999999999999999999999999,
-                "top": y - 20,
-                "left": x,
-                "position": "absolute",
-                "font-weight": "bold",
-                "color": "rgb(72,85,137)"
-            });
-            $("body").append($i);
-            $i.animate({
-                    "top": y - 180,
-                    "opacity": 0
-                },
-                1500,
-                function() {
-                    $i.remove();
-                });
-        });
-    });
-</script>
+<script src="aplayer/aplayerBegin.js"></script>
 <script type="text/javascript">
     $(function () {
         var converter = new showdown.Converter(),
-            text = "### [直男眼里 的 没有对象也要谈恋爱之女朋友的情绪监控 之 分词](/blog1)\n" +
-                "\n" +
-                "![](https://diygod.me/images/havefun.jpg)\n\n" +
-                "\n" +
-                ":kissing_closed_eyes::kissing_closed_eyes:  通过女朋友的一句话分析她的心情 。\n" +
-                "\n" +
-                "Analyze her mood through her girlfriend's words .\n",
+            text = "## MFC-FingerPrint\n" +
+                "基于MFC开发的指纹识别系统.\n",
             html = converter.makeHtml(text);
         document.getElementById("result1").innerHTML = html;
-        converter = new showdown.Converter(),
-            text = "### 自制操作系统Antz\n" +
-                "> 我已经规范了系统代码风格，类似于按照linux分包，把各部分功能区分开了\n" +
-                "##### [Antz系统更新地址](https://www.cnblogs.com/LexMoon/category/1262287.html)\n" +
-                "\n" +
-                "##### [Linux内核源码分析地址](https://www.cnblogs.com/LexMoon/category/1267413.html)\n" +
-                "\n" +
-                "##### [Github项目地址](https://github.com/CasterWx/AntzOS)",
-            html = converter.makeHtml(text);
-        document.getElementById("result2").innerHTML = html;
-        converter = new showdown.Converter(),
-            text = "### Java-Crawler\n" +
-                "各类爬虫代码\n" +
-                "\n" +
-                "##### [模拟登录类](https://github.com/CasterWx/java-Crawler/tree/master/src/%E7%88%AC%E8%99%AB/%E6%A8%A1%E6%8B%9F%E7%99%BB%E5%BD%95) \n" +
-                "##### [数据爬取类](https://github.com/CasterWx/java-Crawler/tree/master/src/%E7%88%AC%E8%99%AB/%E6%95%B0%E6%8D%AE%E8%A7%A3%E6%9E%90)\n" +
-                "#####  关于爬虫代码讲解可以参考[我的博客](http://www.cnblogs.com/LexMoon/),代码编写时间均在2017年下半年，爬虫相应网站可能会有所更新，所以爬虫会出现些问题，如果发现了问题可以联系我，我会抽空重新写一下，当然也欢迎有人帮我改改代码Bug。\n",
-            html = converter.makeHtml(text);
-        document.getElementById("result3").innerHTML = html;
-        converter = new showdown.Converter(),
-            text = "### c-cPlusPlus-Virus\n" +
-                "\n" +
-                "##### 自制病毒——控制桌面背景鼠标以及开关机\n" +
-                "##### 参考:\n" +
-                "##### [Github](https://github.com/CasterWx/c-cPlusPlus-Virus)",
-            html = converter.makeHtml(text);
-        document.getElementById("result4").innerHTML = html;
     });
 </script>
 </html>

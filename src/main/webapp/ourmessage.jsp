@@ -90,7 +90,7 @@
         },
         danmaku: {
             id: 'demo',
-            api: 'https://api.prprpr.me/dplayer/v3/bilibili?aid=4157142'
+            api: 'https://api.prprpr.me/dplayer/v3/bilibili?aid=4124125'
         }
     });
 </script>

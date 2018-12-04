@@ -92,5 +92,10 @@
         </div>
     </div>
 </div>
+<link rel="stylesheet" href="aplayer/APlayer.min.css">
+<div id="aplayer" style="align:center;width:500px;position:fixed; bottom:0; z-index:999;  overflow:visible;">
+</div>
+<script src="aplayer/APlayer.min.js"></script>
+<script src="aplayer/aplayerBegin.js"></script>
 </body>
 </html>
